@@ -1,14 +1,22 @@
 RESET:
 
-1) git reset - Reset to previus commit if a bad file has been added to staging area.
+git reset - Reset to previus commit if a bad file or code has been added to staging area.
 
 git add bad.md
-git reset
+git reset (Will remove bad.md from staging area)
 
-2) git reset {commit hash} - If a bad commit is made, reset to previous commit using the id from log history. This deletes the bad commit from history, but keeps ths changes
-in staging area as before.
+git reset {commit hash} - Soft reset (default behaviour). If a bad commit is made, reset to previous commit using 
+the id from log history. This deletes the bad commit from history, but keeps ths changes in staging area as before.
 
-3) git reset --hard {hash} - Resets to older commit, file changes are gone!
+git reset --hard {hash} - Resets to older commit, file changes are gone!
+
+git reset --hard HEAD~1 : Resets to previous commit, all changes are removed.
+
+git reset --mixed HEAD~1 : The commited code in latest commit goes to the working directory, one can update the code 
+using the latest commit code
+
+git rest --soft HEAD~1 : The commited code in latest commit goes to the staging area along with the last commit code
+One can cherry pick what code to stage and commit.
 
 
 REVERT:
