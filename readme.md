@@ -1,5 +1,4 @@
 # Git concepts and commands.
----
 
 ## Code in Git exists in three areas:
 - **Working directory** - The local development playground where you create, modify, or delete files before staging them..
@@ -8,7 +7,6 @@
   Git tracks content internally using SHA-1 hashes.
 
 ### Git status
----
  Helps in tracking what is in the working directory, staging area, and repository.
 ```
 On branch master
